@@ -1,0 +1,183 @@
+﻿AITP Fa25 – House Price Prediction Project Spec Doc 
+
+
+
+
+Project Name: Fake News Detection 
+# of Sprints Total: 3
+
+
+PM: Benjamin Yan
+
+
+Members:
+
+
+Project Description: Train a model to detect whether a given sentence/tweet is fake news or not ← potential to expand scope to research-focus (improving SOTA)
+
+
+Milestone/Sprint 1: Setup, Data Curation, EDA 
+
+
+Week 1 – Setup environment
+Goals 
+	Description (links, resources)
+	Work Hours
+	Point Person (if applicable)
+	Environment setup #1
+	Create conda environment & local directory for project  
+	1
+	
+
+	Environment setup #2
+	Create a shared github repo with a requirements.txt 
+	2
+	
+
+	Install github repo
+	Clone the github repo, install dependencies via pip
+	1
+	
+
+	Download & load data
+	Download fake news data from https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification 
+	2 
+	
+
+	
+
+Week 2 – Text Processing
+Goals 
+	Description (links, resources)
+	Work Hours
+	Point Person (if applicable)
+	Convert from dict to dataframe
+	For ease of use, let’s convert our dict to a pandas dataframe
+* Each row is a post, with a column for ID, array of tokens (which you might want to concatenate back into a single string), and also most common label from annotators                        
+	2-3
+	
+
+	Pre-process & clean text data
+	Stopwords, punctuation removal. Stemming & lemmatization, etc. 
+	1-2
+	
+
+	How does TF-IDF work?
+	What is TF-IDF and how can we use it in text processing? Try using TF-IDF for our dataset 
+	2-3
+	
+
+	
+
+Week 3 – Text Vectorization
+Goals 
+	Description (links, resources)
+	Work Hours
+	Point Person (if applicable)
+	Understanding word2vec 
+	Learn about how word2vec works to vectorize words
+	1-2
+	
+
+	Implement Sentence2Vec or Doc2Vec
+	Sentence2Vec/Doc2Vec are Word2Vec wrappers that embed full sentences. If we have time, let’s also use these and compare performance
+	1-2
+	
+
+	Any other stuff
+	Buffer for any work that got pushed back, or issues we couldn’t plan ahead for
+	2-3
+	
+
+	
+
+
+
+Milestone/Sprint 2: Data Training 
+
+
+Week 4 – Training a ML model
+Goals 
+	Description (links, resources)
+	Work Hours
+	Point Person (if applicable)
+	Prepare dataset
+	Feature Engineering to prepare a train/test dataset for ML training
+	1-2
+	
+
+	Decide a classifier to use & learn about it
+	Use a standard machine learning/deep learning model to train word embeddings. Examples you could use include:
+* kNN
+* Random Forest / XGBoost
+* LSTMs 
+
+
+What are the strengths & weaknesses of these approaches for text classification? What are the assumptions? Do we follow them? 
+	3-4
+	
+
+	Train model
+	Train the model using an open-source package (scikit-learn, TensorFlow, etc.)
+	1-2
+	
+
+	Evaluate classifier
+	How does the classifier perform for each class?
+	1-2
+	
+
+	
+
+
+
+Week 5/6 – BERT
+
+
+Goals 
+	Description (links, resources)
+	Work Hours
+	Point Person (if applicable)
+	Understanding how BERT works
+	http://jalammar.github.io/illustrated-bert/ and other resources. Why could BERT be useful in our case? 
+	2-3
+	
+
+	Fine-tune BERT 
+	Fine-tune pre-trained BERT on fake news text and classification
+	5-6
+	
+
+	Compare approaches
+	Evaluate the BERT approach and compare it to the standard classifier. 
+	1-2
+	
+
+	Room for improvement
+	How can we improve the models? Read papers on fake news detection recently for inspiration.
+	3-4
+	
+
+	
+
+Week 7 and beyond –– any additional follow-up work, if time permits. Ideas include:
+* Building a simple web app to determine if an input post is fake or not. 
+* Doing more R&D into ways we can improve performance on fake news detection
+   * Explainable AI to provide explanations for classification & train models with better human alignment
+   * Better encoding methodologies 
+* Writing Medium blog post summarizing findings
+
+
+Final Presentation 
+
+
+For your final presentation, imagine you are presenting your fake news classifier to a panel of journalists, policymakers, or social media trust & safety teams. Use your model’s insights to answer questions decision-makers would genuinely care about, such as:
+* What linguistic or stylistic features are most predictive of misinformation?
+
+* Can your model explain why a certain post was flagged as fake?
+
+* How would this system be integrated into an actual content moderation workflow?
+
+* Does your model show biases (e.g., political leaning, topic sensitivity), and how would you address that?
+
+We encourage you to think not just as engineers but as responsible AI practitioners building something that could influence public discourse. Your presentation should make the model feel usable and trustworthy to a non-technical stakeholder.
