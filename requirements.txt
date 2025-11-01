@@ -1,0 +1,28 @@
+# Core Python libraries
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+
+# NLP + text preprocessing
+nltk
+spacy
+textblob
+
+# Deep learning / Transformers (if applicable)
+torch
+transformers
+
+# Data loading and utilities
+tqdm
+joblib
+
+# For notebook development
+jupyter
+notebook
+
+# Optional: Model explainability and visualization
+lime
+wordcloud
+
